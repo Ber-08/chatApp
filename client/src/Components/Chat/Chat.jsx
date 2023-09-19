@@ -9,7 +9,8 @@ import TextContainer from "../TextContainer/TextContainer.js";
 import "./Chat.css";
 
 //! connection with backend
-const socket = io.connect("http://127.0.0.1:8000");
+// const socket = io.connect("http://127.0.0.1:8000");
+const socket = io.connect("https://chatapplication-prjr.onrender.com/");
 
 const Chat = () => {
   const [name, setUserName] = useState("");
@@ -59,11 +60,7 @@ const Chat = () => {
       <div className="container">
         <InfoBar room={room} />
         <Messages messages={messages} name={name} />
-        <Input
-          message={message}
-          setMessage={setMessage}
-          sendMessage={sendMessage}
-        />
+        <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
       </div>
       <TextContainer users={users} />
     </div>
