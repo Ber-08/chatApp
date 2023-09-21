@@ -9,8 +9,8 @@ import TextContainer from "../TextContainer/TextContainer.js";
 import "./Chat.css";
 
 //! connection with backend
-// const socket = io.connect("http://127.0.0.1:8000");
-const socket = io.connect("https://chatapplication-prjr.onrender.com/");
+const socket = io.connect("http://127.0.0.1:8000");
+// const socket = io.connect("https://chatapplication-prjr.onrender.com/");
 
 const Chat = () => {
   const [name, setUserName] = useState("");
